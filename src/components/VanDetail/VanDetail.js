@@ -9,7 +9,7 @@ const VanDetail = () => {
     fetch(`/api/vans/${params.id}`)
       .then((res) => res.json())
       .then((data) => setVanDetail(data.vans));
-  }, []);
+  }, [params.id]);
   return (
     <div className="van-detail-container">
       {vanDetail ? (
