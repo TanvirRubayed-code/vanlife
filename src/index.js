@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Vans from "./components/Vans/Vans";
@@ -20,15 +19,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      // relative path does not start with / in routes
+      {/* relative path does not start with / in routes */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="vans" element={<Vans />} />
         <Route path="vans/:id" element={<VanDetail />} />
         <Route path="host" element={<HostLayout />}>
-          <Route index element={<Dashboard />} /> // index route or path=""
-          works fine
+          <Route index element={<Dashboard />} />
+          {/* index route or path="" works fine */}
           <Route path="income" element={<Income />} />
           <Route path="reviews" element={<Reviews />} />
           <Route path="vans" element={<HostVans />} />
