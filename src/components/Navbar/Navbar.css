@@ -23,3 +23,7 @@ nav > a:hover {
     color: #161616;
     text-decoration: underline;
 }
+.underline {
+    text-decoration: underline;
+    font-weight: bold;
+}

@@ -6,4 +6,6 @@
 body {
   background-color: #fff7ed;
   font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
